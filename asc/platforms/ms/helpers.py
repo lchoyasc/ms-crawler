@@ -40,7 +40,7 @@ class MSHelper(Crawler):
         start_date = self.get_from_date().strftime("%d/%m/%Y")
         end_date = datetime.now().strftime("%d/%m/%Y")
         return {
-            "search": f"(researchtype==Equity);(region==Europe,region==North America);(subject=={report_type_broker});date==custom={start_date}..{end_date}",
+            "search": f"(researchtype==Equity);(region==Europe,region==North America,region==Asia Pacific,region==Japan);(subject=={report_type_broker});date==custom={start_date}..{end_date}",
             "sort": "d",
             "noSearch": False,
             "gn": False,
